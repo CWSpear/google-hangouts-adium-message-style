@@ -11,4 +11,8 @@ Steps were taken to remove flexbox as a dependency (Adium's WebKit engine doesn'
 
 For group chats, I replaced incoming messages icons with a unqiue (to the person talking), persistent Identicon. I couldn't find a theme I liked that really distinguished people in group chats. That's really the main reason I set out to create this theme.
 
-To download: visit this theme's download page on Adium's site (link forthcoming).
+###Download/Installation###
+
+To download: visit this [theme's download page](http://adiumxtras.com/index.php?a=xtras&xtra_id=8491) on Adium's site. If Adium's installed, you can use the "Install" link from there to open it in Adium, or download it and double-click it which automatically moves it to the proper place.
+
+**Please,** if you're going to install it, do it from that page.
