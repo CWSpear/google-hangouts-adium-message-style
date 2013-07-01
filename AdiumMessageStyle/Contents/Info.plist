@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>CFBundleName</key>
+        <string>Hangouts</string>
+
+        <key>CFBundleIdentifier</key>
+        <string>cwspear.hangouts.style</string>
+
+        <key>CFBundleGetInfoString</key>
+        <string>Hangouts v1.0</string>
+
+        <key>DefaultFontFamily</key>
+        <string>Helvetica Neue</string>
+
+        <key>DefaultFontSize</key>
+        <integer>16</integer>
+
+        <key>CFBundleDevelopmentRegion</key>
+        <string>English</string>
+
+        <key>CFBundleShortVersionString</key>
+        <string>1.0</string>
+
+        <key>DisableCombineConsecutive</key>
+        <false/>
+
+        <key>DisableCustomBackground</key>
+        <true/>
+
+        <key>DefaultBackgroundColor</key>
+        <string>E5E5E5</string>
+
+        <key>DefaultBackgroundIsTransparent</key>
+        <false/>
+
+        <key>MessageViewVersion</key>
+        <integer>4</integer>
+
+        <key>ShowsUserIcons</key>
+        <true/>
+
+        <key>AllowTextColors</key>
+        <true/>
+    </dict>
+</plist>
