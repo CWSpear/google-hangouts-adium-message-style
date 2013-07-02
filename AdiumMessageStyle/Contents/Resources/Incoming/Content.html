@@ -1,9 +1,9 @@
-<div class="other">
-    <div class="avatar">
-        <img src="http://www.gravatar.com/avatar/%senderColor%?r=PG&amp;s=80&amp;default=identicon" class="group-avatar" alt="Avatar">
-        <img src="%userIconPath%" onload="newIncoming(false)" class="single-avatar" alt="Avatar">
+<div class="hangouts-other %messageClasses%">
+    <div class="hangouts-avatar">
+        <img src="http://www.gravatar.com/avatar/%senderColor%?r=PG&amp;s=80&amp;default=identicon" class="hangouts-group-avatar" alt="%sender%">
+        <img src="%userIconPath%" class="hangouts-single-avatar" alt="%sender%">
     </div>
-    <div class="messages">
+    <div class="hangouts-messages">
         <p>%message%</p>
         <div id="insert"></div>
         <time datetime="%time{EEE MMM dd yyyy HH:mm:ss zzz}%">%sender% • <span>Now</span></time>

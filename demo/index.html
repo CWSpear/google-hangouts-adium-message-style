@@ -1,42 +1,63 @@
 <html>
 <head>
     <title>Hangouts Adium Message Style</title>
-    <link rel="stylesheet" href="../AdiumMessageStyle/Contents/Resources/main.css">
+    <link rel="stylesheet" href="../Hangouts.AdiumMessageStyle/Contents/Resources/main.css">
 </head>
-<body>
-    <div class="other">
-        <div class="avatar">
+<body class="body">
+    <div class="hangouts-topic">
+        Today's topic is a long one! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tecum optime, deinde etiam cum mediocri amico. Omnia contraria, quos etiam insanos esse vultis. An dolor longissimus quisque miserrimus, voluptatem non optabiliorem diuturnitas facit? Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Mihi, inquam, qui te id ipsum rogavi? Duo Reges: constructio interrete. An haec ab eo non dicuntur?
+        Si quicquam extra virtutem habeatur in bonis. Tu enim ista lenius, hic Stoicorum more nos vexat. Oratio me istius philosophi non offendit; Nescio quo modo praetervolavit oratio. Haec para/doca illi, nos admirabilia dicamus. Quippe: habes enim a rhetoribus; Sin laboramus, quis est, qui alienae modum statuat industriae? Propter nos enim illam, non propter eam nosmet ipsos diligimus. Nobis aliter videtur, recte secusne, postea; Quamquam haec quidem praeposita recte et reiecta dicere licebit.
+        Sed in rebus apertissimis nimium longi sumus. Nam quid possumus facere melius?
+        Terram, mihi crede, ea lanx et maria deprimet. Qui autem esse poteris, nisi te amor ipse ceperit?
+    </div>
+    <style>
+        body {
+            padding-top: 3.076923077em;
+        }
+    </style>
+    <div class="hangouts-other history">
+        <div class="hangouts-avatar">
             <img src="../img/outgoing.png" />
         </div>
-        <div class="messages">
+        <div class="hangouts-messages">
             <p>Please sir, can I have some more?</p>
             <time datetime="2009-11-13T20:00">Cameron • 50 min</time>
         </div>
     </div>
-    <div class="self">
-        <div class="avatar">
+    <div class="hangouts-self">
+        <div class="hangouts-avatar">
             <img src="../img/incoming.png" />
         </div>
-        <div class="messages">
+        <div class="hangouts-messages">
             <p>More what?</p>
             <p>Insults?</p>
             <p>You stare at frozen juice cans because they say, "concentrate."</p>
             <time datetime="2009-11-13T20:14">49 mins</time>
         </div>
     </div>
-    <div class="status" title="10:16">Cameron went away.</div>
-    <div class="status" title="10:17">Cameron came back.</div>
-    <div class="other">
-        <div class="avatar">
+    <div class="hangouts-status" title="10:16">Cameron went away.</div>
+    <div class="hangouts-status" title="10:17">Cameron came back.</div>
+    <div class="hangouts-other mention focus">
+        <div class="hangouts-avatar">
             <img src="../img/outgoing.png" />
         </div>
-        <div class="messages">
-            <p>I just wanted some more soup, man.</p>
-            <time datetime="2009-11-13T20:00">Cameron • Now</time>
+        <div class="hangouts-messages">
+            <p>CWSpear, I just wanted some more <a href="#">soup</a>.</p>
+            <time datetime="2009-11-13T20:00">Cameron • 32 mins</time>
         </div>
     </div>
 
-    <script src="../AdiumMessageStyle/Contents/Resources/js/jquery.min.js"></script>
-    <script src="../AdiumMessageStyle/Contents/Resources/js/script.min.js"></script>
+    <div class="hangouts-other focus">
+        <div class="hangouts-avatar">
+            <img src="../img/outgoing.png" />
+        </div>
+        <div class="hangouts-messages">
+            <p>You still there?</p>
+            <time datetime="2009-11-13T20:00">Cameron • 25 mins</time>
+        </div>
+    </div>
+
+    <script src="../Hangouts.AdiumMessageStyle/Contents/Resources/js/jquery.min.js"></script>
+    <script src="../Hangouts.AdiumMessageStyle/Contents/Resources/js/script.min.js"></script>
 </body>
 </html>

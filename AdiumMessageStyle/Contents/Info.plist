@@ -15,13 +15,13 @@
         <string>Helvetica Neue</string>
 
         <key>DefaultFontSize</key>
-        <integer>16</integer>
+        <integer>13</integer>
 
         <key>CFBundleDevelopmentRegion</key>
         <string>English</string>
 
         <key>CFBundleShortVersionString</key>
-        <string>1.0</string>
+        <string>1.0.1</string>
 
         <key>DisableCombineConsecutive</key>
         <false/>

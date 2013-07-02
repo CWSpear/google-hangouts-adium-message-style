@@ -1,39 +1,3 @@
-var common = function(isConsecutive) {
-    if(isConsecutive) $('time').last().attr('datetime', new Date().toString());
-    updateTime();
-};
-
-// Right now, all the events are the same, but I have it here
-// in case I want to do something else with them
-
-var newIncoming = function(isConsecutive) {
-    common(isConsecutive);
-};
-
-var newOutgoing = function(isConsecutive) {
-    common(isConsecutive);
-};
-
-// helper to help log messages to the chat window
-var log = function(str) {
-    var $message = $('<p class="debug"></p>').html(str);
-    $('.self, .other').last().after($message);
-};
-
-var isToday = function(time) {
-    var today = new Date(new Date().toISOString().substring(0,10)).getTime();
-    var otherTime = new Date(new Date(time).toISOString().substring(0,10)).getTime();
-
-    return today == otherTime;
-};
-
-var isThisYear = function(time) {
-    var today = new Date().getFullYear();
-    var otherTime = new Date(time).getFullYear();
-
-    return today == otherTime;
-}
-
 var timeTimeout;
 var updateTime = function() {
     clearTimeout(timeTimeout);
@@ -64,10 +28,38 @@ var updateTime = function() {
     timeTimeout = setTimeout(updateTime, 1000 * 60);
 }
 
-updateTime();
+// helper to help log messages to the chat window
+var log = function(str) {
+    var $message = $('<p class="hangouts-debug"></p>').html(str);
+    $('.self, .other').last().after($message);
+};
 
-// to compensatve for lag on first load
+var isToday = function(time) {
+    var today = new Date(new Date().toISOString().substring(0,10)).getTime();
+    var otherTime = new Date(new Date(time).toISOString().substring(0,10)).getTime();
+
+    return today == otherTime;
+};
+
+var newMessage = function(elem) {
+    if(!!elem) document.getElementById("Chat").appendChild(elem);
+
+    if(!elem) $('time').last().attr('datetime', new Date().toString());
+    updateTime();
+};
+
+if(!coalescedHTML) coalescedHTML = new CoalescedHTML();
+coalescedHTML.setAppendElementMethod(newMessage);
+
+var isThisYear = function(time) {
+    var today = new Date().getFullYear();
+    var otherTime = new Date(time).getFullYear();
+
+    return today == otherTime;
+}
+
 setTimeout(updateTime, 100);
+
 
 // http://phpjs.org/functions/date/
 // timestamp must be SECONDS, not MILLISECONDS
@@ -81,7 +73,7 @@ function date (format, timestamp) {
         // below for file size reasons)
         //, tal= [],
         _pad = function (n, c) {
-            n = n.toString();
+            n = n + '';
             return n.length < c ? _pad('0' + n, c, '0') : n;
         },
         txt_words = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

@@ -1,21 +1,56 @@
-// • CSS adapted from Chris Coyiers' post - http://css-tricks.com/replicating-google-hangouts-chat/ 
-// • Design based off of Google Hangouts "app" - http://www.google.com/hangouts/
+// • CSS adapted from Chris Coyiers' post - http://css-tricks.com/replicating-google-hangoutss-chat/ 
+// • Design based off of Google hangoutss "app" - http://www.google.com/hangoutss/
+
+$mentionColor: #303030;
+$focusColor: #62b450;
 
 body {
-    font-family: 'Helvetica';
-    list-style: none;
     background: #e5e5e5;
     margin: 0;
-    padding: 0 0 50px 0; // finality
+    padding: 5px 0 50px 0; // finality
+}
+
+// for testing
+.body {
+    font-family: 'Helvetica';
+    font-size: 13px;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
 }
 
 %message-wrapper {
-    padding: 10px;
+    padding: 5px 10px 5px;
     overflow: hidden;
     position: relative;
+
+    &.history {
+        .hangouts-avatar img {
+            opacity: 0.5;
+        }
+    }
+
+    &.focus {
+        .hangouts-messages {
+            border-right: 3px solid $focusColor;  
+        }
+    }
+
+    &.mention {
+        .hangouts-messages {
+            background-color: $mentionColor;
+            color: white;
+            a {
+                color: #7baaef;
+
+                &:visited { color: #b78eef; }
+            }
+        }
+    }
 }
 
-.avatar {
+.hangouts-avatar {
     width: 40px; // stronger than %
     height: 40px;
     position: relative; // for triangle
@@ -25,22 +60,22 @@ body {
     }
 }
 
-.other {
+.hangouts-other {
     @extend %message-wrapper;
 
-    .messages {
+    .hangouts-messages {
         float: left;
         border-top-left-radius: 0; // weird shadow fix
         margin-left: 40px;
     }
 
-    .avatar {
+    .hangouts-avatar {
         position: absolute;
-        top: 10px;
+        top: 5px;
         left: 10px;
         z-index: 1;
 
-        .group-avatar {
+        .hangouts-group-avatar {
             display: none;
 
             .groupchat & {
@@ -48,7 +83,7 @@ body {
             }
         }
 
-        .single-avatar {
+        .hangouts-single-avatar {
             .groupchat & {
                 display: none;
             }
@@ -68,21 +103,29 @@ body {
             border-bottom-color: transparent;
         }
     }
+
+    &.mention {
+        .hangouts-avatar:after {
+            border-color: $mentionColor;
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+        }
+    }
 }
 
-.self {
+.hangouts-self {
     @extend %message-wrapper;
 
-    .messages {
+    .hangouts-messages {
         float: right;
         margin-right: 40px;
         border-bottom-right-radius: 0; // weird shadow fix
     }
 
-    .avatar {
+    .hangouts-avatar {
         position: absolute;
         right: 10px;
-        bottom: 10px;
+        bottom: 5px;
         z-index: 1;
 
         img { border-radius: 0 2px 2px 0; }
@@ -111,31 +154,63 @@ body {
     }
 }
 
-.messages {
+.hangouts-messages {
     background: white;
     padding: 10px;
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(black, 0.2);
 
     p {
-        font-size: 0.8rem;
-        margin: 0 0 0.375rem 0;
+        font-size: 1em;
+        margin: 0 0 0.5em 0;
     }
     
     time {
-        font-size: 0.7rem;
+        font-size: 0.85em;
         color: #bbb;
     }
 }
 
-.status {
+.hangouts-status {
     padding: 2px 10px;
     text-align: center;
     color: #9a9a9a;
-    font-size: 0.7rem;
+    font-size: 0.85em;
 }
 
-.debug {
+.hangouts-topic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .769230769em; 
+    background: white;
+    z-index: 50;
+    max-height: 2.538461538em;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(black, 0.2);
+    
+    &:after {
+        content: '';
+        width: 100%;
+        height: 15px;
+        background: -webkit-linear-gradient(rgba(white, 0), white);
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+    }
+
+    &:hover {
+        height: auto;
+        max-height: none;
+    }
+
+    &:empty {
+        display: none;
+    }
+}
+
+.hangouts-debug {
     margin: 10px;
     padding: 10px;
 
