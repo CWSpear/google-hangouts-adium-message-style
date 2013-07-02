@@ -9,7 +9,7 @@
         <string>cwspear.hangouts.style</string>
 
         <key>CFBundleGetInfoString</key>
-        <string>Hangouts v1.0</string>
+        <string>Hangouts v2.0</string>
 
         <key>DefaultFontFamily</key>
         <string>Helvetica Neue</string>
@@ -21,7 +21,7 @@
         <string>English</string>
 
         <key>CFBundleShortVersionString</key>
-        <string>1.0.1</string>
+        <string>2.0</string>
 
         <key>DisableCombineConsecutive</key>
         <false/>
