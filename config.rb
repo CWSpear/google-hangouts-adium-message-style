@@ -2,11 +2,11 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "Hangouts.AdiumMessageStyle/Contents/Resources/"
+css_dir = "Google Hangouts.AdiumMessageStyle/Contents/Resources/"
 sass_dir = "scss"
 images_dir = "img"
-javascripts_dir = "Hangouts.AdiumMessageStyle/Contents/Resources/js"
-fonts_dir = "Hangouts.AdiumMessageStyle/Contents/Resources/fonts"
+javascripts_dir = "Google Hangouts.AdiumMessageStyle/Contents/Resources/js"
+fonts_dir = "Google Hangouts.AdiumMessageStyle/Contents/Resources/fonts"
 
 output_style = :compressed
 
