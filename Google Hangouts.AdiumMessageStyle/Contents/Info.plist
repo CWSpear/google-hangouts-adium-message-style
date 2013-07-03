@@ -20,6 +20,9 @@
         <key>CFBundleDevelopmentRegion</key>
         <string>English</string>
 
+        <key>CFBundleVersion</key>
+        <string>2.0</string>
+
         <key>CFBundleShortVersionString</key>
         <string>2.0</string>
 
@@ -27,7 +30,7 @@
         <false/>
 
         <key>DisableCustomBackground</key>
-        <true/>
+        <false/>
 
         <key>DefaultBackgroundColor</key>
         <string>E5E5E5</string>
