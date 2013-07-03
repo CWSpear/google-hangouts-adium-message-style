@@ -15,4 +15,4 @@ For group chats, I replaced incoming messages icons with a unqiue (to the person
 
 To download: visit this [theme's download page](http://adiumxtras.com/index.php?a=xtras&xtra_id=8491) on Adium's site. If Adium's installed, you can use the "Install" link from there to open it in Adium, or download it and double-click it which automatically moves it to the proper place.
 
-**Please,** if you're going to install it, do it from that page.
+**Please,** if you're going to install it, do it from the [theme's download page](http://adiumxtras.com/index.php?a=xtras&xtra_id=8491) and not from this repo.
