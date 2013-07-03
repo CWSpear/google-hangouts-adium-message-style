@@ -3,7 +3,7 @@ Hangouts.AdiumMessageStyle
 
 **Unofficial clone of the Google Hangouts theme for Adium.**
 
-<img src="https://raw.github.com/CWSpear/hangouts-adium-message-style/master/img/screenshot.png" alt="Screenshot of theme" width="400" height="362">
+<img style="box-shadow: 0 0 3px rgba(0, 0, 0, 0.2)" src="https://raw.github.com/CWSpear/hangouts-adium-message-style/master/img/screenshot.png" alt="Screenshot of theme" width="400" height="437.5">
 
 This is a theme based off of the [Google Hangouts](http://www.google.com/hangouts/), using Chris Coyier's [blog post from CSS-Tricks](http://css-tricks.com/replicating-google-hangouts-chat/) as a starting point.
 
