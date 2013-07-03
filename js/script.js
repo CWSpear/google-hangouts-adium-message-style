@@ -34,13 +34,6 @@ var log = function(str) {
     $('.self, .other').last().after($message);
 };
 
-var isToday = function(time) {
-    var today = new Date(new Date().toISOString().substring(0,10)).getTime();
-    var otherTime = new Date(new Date(time).toISOString().substring(0,10)).getTime();
-
-    return today == otherTime;
-};
-
 var newMessage = function(elem) {
     if(!!elem) document.getElementById("Chat").appendChild(elem);
 
@@ -51,15 +44,26 @@ var newMessage = function(elem) {
 if(!coalescedHTML) coalescedHTML = new CoalescedHTML();
 coalescedHTML.setAppendElementMethod(newMessage);
 
+$('.hangouts-update .close').click(function() {
+    $('.hangouts-update').hide();
+});
+
+setTimeout(updateTime, 100);
+
+// date related functions
+var isToday = function(time) {
+    var today = new Date(new Date().toISOString().substring(0,10)).getTime();
+    var otherTime = new Date(new Date(time).toISOString().substring(0,10)).getTime();
+
+    return today == otherTime;
+};
+
 var isThisYear = function(time) {
     var today = new Date().getFullYear();
     var otherTime = new Date(time).getFullYear();
 
     return today == otherTime;
 }
-
-setTimeout(updateTime, 100);
-
 
 // http://phpjs.org/functions/date/
 // timestamp must be SECONDS, not MILLISECONDS

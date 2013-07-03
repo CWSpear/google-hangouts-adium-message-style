@@ -33,7 +33,7 @@ body {
 
     &.focus {
         .hangouts-messages {
-            border-right: 3px solid $focusColor;  
+            border-right: 4px solid $focusColor;  
         }
     }
 
@@ -210,6 +210,26 @@ body {
     }
 }
 
+.hangouts-update {
+    @extend .hangouts-topic;
+    display: none;
+
+    top: auto;
+    bottom: 0;
+    height: auto;
+    max-height: none;
+    box-shadow: 0 -1px 2px rgba(black, 0.2);
+
+    .close {
+        float: right;
+        cursor: pointer;
+    }
+
+    &:after {
+        display: none;
+    }
+}
+
 .hangouts-debug {
     margin: 10px;
     padding: 10px;
@@ -218,4 +238,9 @@ body {
     border: 1px solid #fbeed4;
     color: #c09853;
     border-radius: 4px;
+}
+
+.actionMessageBody {
+    font-style: italic;
+    &:before, &:after { content: ''; }
 }
