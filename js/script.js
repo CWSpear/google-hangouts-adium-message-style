@@ -35,7 +35,12 @@ var log = function(str) {
 };
 
 var newMessage = function(elem) {
-    if(!!elem) document.getElementById("Chat").appendChild(elem);
+    if(!!elem) {
+        document.getElementById("Chat").appendChild(elem);
+        $('.hangouts-sender-avatar.not-processed').not('[src$="_icon.png"]').each(function() {
+            $(this).show().prev().hide();
+        }).removeClass('not-processed');
+    }
 
     if(!elem) $('time').last().attr('datetime', new Date().toString());
     updateTime();

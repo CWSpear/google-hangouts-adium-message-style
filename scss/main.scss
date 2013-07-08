@@ -75,18 +75,12 @@ body {
         left: 10px;
         z-index: 1;
 
-        .hangouts-group-avatar {
+        .hangouts-sender-avatar {
             display: none;
-
-            .groupchat & {
-                display: inline;
-            }
         }
 
-        .hangouts-single-avatar {
-            .groupchat & {
-                display: none;
-            }
+        .hangouts-generic-avatar {
+            display: inline;
         }
 
         img { border-radius: 2px 0 0 2px; }
