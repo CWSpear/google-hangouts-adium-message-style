@@ -3,13 +3,13 @@
 <plist version="1.0">
     <dict>
         <key>CFBundleName</key>
-        <string>Hangouts</string>
+        <string>Google Hangouts</string>
 
         <key>CFBundleIdentifier</key>
-        <string>cwspear.hangouts.style</string>
+        <string>cwspear.Google Hangouts.style</string>
 
         <key>CFBundleGetInfoString</key>
-        <string>Hangouts v2.0</string>
+        <string>Google Hangouts v2.0</string>
 
         <key>DefaultFontFamily</key>
         <string>Helvetica Neue</string>
