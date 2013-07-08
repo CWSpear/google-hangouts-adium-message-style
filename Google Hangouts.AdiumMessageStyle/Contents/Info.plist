@@ -9,7 +9,7 @@
         <string>cwspear.Google Hangouts.style</string>
 
         <key>CFBundleGetInfoString</key>
-        <string>Google Hangouts v2.0</string>
+        <string>Google Hangouts v2.1</string>
 
         <key>DefaultFontFamily</key>
         <string>Helvetica Neue</string>
@@ -21,10 +21,10 @@
         <string>English</string>
 
         <key>CFBundleVersion</key>
-        <string>2.0</string>
+        <string>2.1</string>
 
         <key>CFBundleShortVersionString</key>
-        <string>2.0</string>
+        <string>2.1</string>
 
         <key>DisableCombineConsecutive</key>
         <false/>
