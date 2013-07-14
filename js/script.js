@@ -2,25 +2,23 @@ var timeTimeout;
 var updateTime = function() {
     clearTimeout(timeTimeout);
 
-    $('time').each(function() {
+    $('.in-last-hour').each(function() {
         var $this = $(this);
         var time = new Date($this.attr('datetime')).getTime();
 
         var stamp;
-        if(isToday(time)) {
-            var now = new Date().getTime();
-            var diff = now - time;
-            diff /= 1000; // convert to seconds
 
-            if(diff < 60) stamp = 'Now';
-            else if(diff < 2 * 60) stamp = '1 min';
-            else if(diff < 60 * 60) stamp = Math.floor(diff / 60) + ' mins';
-            else stamp = date('g:i A', time / 1000);
-        } else if(isThisYear(time)) {
-            stamp = date('M j, g:i A', time / 1000);
-        } else {
+        var now = new Date().getTime();
+        var diff = now - time;
+        diff /= 1000; // convert to seconds
+
+        if(diff < 60) stamp = 'Now';
+        else if(diff < 2 * 60) stamp = '1 min';
+        else if(diff < 60 * 60) stamp = Math.floor(diff / 60) + ' mins';
+        else {
             stamp = date('M j, Y - g:i A', time / 1000);
-        }
+            $this.removeClass('in-last-hour');
+        } 
 
         $this.find('span').text(stamp);
     });
