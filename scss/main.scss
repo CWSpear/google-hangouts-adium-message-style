@@ -25,6 +25,13 @@ body {
     overflow: hidden;
     position: relative;
 
+    .hangouts-messages {
+        // so that long text will overflow correctly
+        max-width: -webkit-calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        word-wrap: break-word;
+    }
+
     &.history {
         .hangouts-avatar img {
             opacity: 0.5;
